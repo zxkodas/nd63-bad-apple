@@ -1,6 +1,6 @@
 # nd63-bad-apple
 
-Bad Apple!! on the per-key RGB of an **IROK ND63** keyboard, in sync with the music, on Linux.
+Bad Apple!! on the per-key RGB of an **IROK ND63 MAX** keyboard, in sync with the music, on Linux.
 
 The keyboard's stock firmware has no way to stream per-key colours live. What it does have is the
 "custom image" feature from its web app (light mode 13). So this re-uploads that image over and over,
@@ -8,13 +8,24 @@ one video frame at a time, while the song plays. It works, with some catches (be
 
 ## What you need
 
-- An IROK ND63 (`3151:502d`) connected by USB cable, on Linux. Other boards: see
-  [COMPATIBLE.md](COMPATIBLE.md).
+- An IROK ND63 MAX (`3151:502d`) connected by USB cable, on Linux. Other boards: see
+  [Which ND63](#which-nd63) and [COMPATIBLE.md](COMPATIBLE.md).
 - Python 3 with numpy, ffmpeg (includes ffplay), and yt-dlp to fetch the video.
 - Read/write access to the keyboard's `/dev/hidraw*` node. Most desktops give the logged-in user
   this already; check with `python3 nd63.py info`.
 
 No other Python packages: the scripts talk to hidraw directly with `ioctl`.
+
+## Which ND63
+
+| model | status |
+|---|---|
+| **ND63 MAX** | tested; this is the board everything here was built on |
+| **ND63 Ultra** | should work: it's pretty much the same board as the MAX. Untested |
+| **ND63 Pro** | not supported: it has a different kind of RGB |
+
+The MAX reports itself over USB as "IROK ND_63" (device id 3115 in the vendor's list), and that
+list has no separate MAX/Ultra entries. `python3 nd63.py info` prints your board's device id.
 
 ## Run it
 

@@ -1,4 +1,4 @@
-"""IROK ND63 RGB (USB 3151:502d) live per-key lighting over the vendor HID interface.
+"""IROK ND63 MAX (USB 3151:502d, reports as "IROK ND_63") live per-key lighting over the vendor HID interface.
 
 Only these opcodes are ever sent: 0x0F (live colour frame, RAM only), 0x8F (identify),
 0x87 (read LED mode) and 0x07 (set LED mode). Never 0x0C (writes flash), 0xAC (flash erase)

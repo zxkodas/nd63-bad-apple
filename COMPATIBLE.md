@@ -1,6 +1,8 @@
 # Compatible keyboards
 
-Only the **IROK ND_63** (`3151:502d`, device id 3115) has been tested on real hardware.
+Only the **IROK ND63 MAX** (reports as "IROK ND_63", `3151:502d`, device id 3115) has been tested on
+real hardware. The ND63 Ultra is said to be pretty much the same board, so it should work too. The
+ND63 Pro has a different kind of RGB and is not supported.
 
 In the vendor's own web app, the boards below use the ND63's protocol class (`CommonKBRY5088`), or
 a subclass of it that doesn't change image upload or light-mode commands. Their chips vary (RY5088,
@@ -183,7 +185,7 @@ Source: the device list and protocol classes in the vendor web app, as extracted
 | rongyuan | Gaming Keyboard | `3151:5029` | 2899 | `ry5088_nbd_mk25051b_1m_8k` |
 | rongyuan | Gaming Keyboard | `3151:502f` | 2892 | `ry5088_x87a_dy_8k_8k_002` |
 | rongyuan | GK75 | `3151:5029` | 3075 | `ry5088_kf304b_1m_8k` |
-| rongyuan | IROK ND_63 **(tested)** | `3151:502d` | 3115 | `ry5088_jc_gk8145g_1m_8k` |
+| rongyuan | IROK ND_63 (ND63 MAX **tested**, Ultra likely) | `3151:502d` | 3115 | `ry5088_jc_gk8145g_1m_8k` |
 | rongyuan | K67 | `3151:5029` | 2723 | `ry5088_mopao_k67_1m_8k` |
 | rongyuan | K860 | `3151:5002` | 2958 | `yc3123_gjy_k860_3m_1k_soc` |
 | rongyuan | KF068 | `3151:5029` | 2278 | `ry5088_xs_kf068_dm_8k` |
