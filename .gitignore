@@ -1,0 +1,5 @@
+media/
+previews/
+saved_led.json
+__pycache__/
+*.pyc
